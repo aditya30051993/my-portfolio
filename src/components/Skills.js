@@ -1,24 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
-const Skills = () => (
-  <section className="skills" id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Full-Stack Development</li>
-      <li>App Development 📱</li>
-      <li>Chatbot Creation 🤖</li>
-      <li>DevOps and Automation 🔧</li>
-      <li>Python (Flask, Django, FastAPI) 🐍</li>
-      <li>JavaScript (Node.js, React.js) 💻</li>
-      <li>Flutter for Mobile App Development 📲</li>
-      <li>Botpress for Chatbots</li>
-      <li>Firebase for Real-Time Databases</li>
-      <li>Cloud Platforms (GCP, AWS, Azure) ☁️</li>
-      <li>OpenAI's ChatGPT for Intelligent Conversational Agents 🧠</li>
-      <li>DevOps Tools (Terraform, Docker, Kubernetes, CI/CD) ⚙️</li>
-      <li>Strong Communication Skills 💬</li>
-    </ul>
-  </section>
-);
+const Skills = () => {
+  const [activeTab, setActiveTab] = useState("Skills");
+  const [indicatorStyle, setIndicatorStyle] = useState({});
+  const tabRefs = useRef({});
+
+  const skillsData = {
+    Skills: [
+      { name: "Full-Stack Development", icon: "🔧", link: "#" },
+      { name: "App Development", icon: "📱", link: "#" },
+      { name: "Chatbot Creation", icon: "🤖", link: "#" },
+    ],
+    Stacks: [
+      { name: "React.js", icon: "⚛️", link: "#" },
+      { name: "Flask", icon: "🐍", link: "#" },
+      { name: "Python", icon: "🐍", link: "#" },
+      { name: "JavaScript", icon: "💻", link: "#" },
+    ],
+    Tools: [
+      { name: "Docker", icon: "🐋", link: "#" },
+      { name: "Terraform", icon: "⚙️", link: "#" },
+    ],
+  };
+
+  useEffect(() => {
+    const tab = tabRefs.current[activeTab];
+    if (tab) {
+      setIndicatorStyle({
+        width: `${tab.offsetWidth - 25}px`,
+        left: `${tab.offsetLeft}px`,
+      });
+    }
+  }, [activeTab]);
+
+  return (
+    <section className="skills" id="skills">
+      <div className="tabs">
+        {Object.keys(skillsData).map((tab) => (
+          <button
+            key={tab}
+            ref={(el) => (tabRefs.current[tab] = el)}
+            className={`tab ${activeTab === tab ? "active" : ""}`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab}
+          </button>
+        ))}
+        <div className="active-tab-indicator" style={indicatorStyle}>
+          {activeTab}
+        </div>
+      </div>
+      <div className="grid">
+        {skillsData[activeTab].map(({ name, icon, link }) => (
+          <a key={name} href={link} className="card">
+            <span className="icon">{icon}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;

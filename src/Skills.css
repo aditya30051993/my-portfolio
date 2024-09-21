@@ -1,0 +1,85 @@
+.skills {
+  padding: 20px;
+}
+
+.tabs {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+
+.tab {
+  flex: 1; /* Ensure equal width for all tabs */
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.3s;
+  align-self: center; /* Center the text */
+  width: 110px;
+  height: 50px;
+}
+
+.tab.active {
+  color: white;
+}
+
+.tab:not(.active):hover {
+  background-color: #e7e7e7;
+}
+
+.active-tab-indicator {
+  position: absolute;
+  height: 80%;
+  background-color: #007bff;
+  transition: left 0.3s ease, width 0.3s ease; /* Smooth transition for left and width */
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center; /* Center the text */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 7px;
+  margin-left: 5px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.05);
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.label {
+  margin-top: 10px;
+}

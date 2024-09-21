@@ -13,6 +13,7 @@ import "./Sidebar.css";
 import "./Sections.css";
 import './Footer.css';
 import './About.css';
+import './Skills.css';
 
 function App() {
   return (
