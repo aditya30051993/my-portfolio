@@ -74,9 +74,9 @@ const Skills = () => {
       { name: "FastAPI", icon: "🚀", link: "https://fastapi.tiangolo.com/" },
       { name: "React.js", icon: "⚛️", link: "https://reactjs.org/" },
       {
-        name: "Centers for Disease Control (CDC)",
-        icon: "🦠",
-        link: "https://www.cdc.gov/",
+        name: "PubMed",
+        icon: "📚",
+        link: "https://pubmed.ncbi.nlm.nih.gov/",
       },
       { name: "Flask", icon: "🐍", link: "https://flask.palletsprojects.com/" },
       { name: "Node.js", icon: "🌐", link: "https://nodejs.org/" },
