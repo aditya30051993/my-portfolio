@@ -171,8 +171,7 @@
 @media screen and (max-width: 768px) {
   .link-card-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    padding: 0;
+    row-gap: 40px;
   }
 
   .link-card {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
   FaHome,
-  FaUser,
   FaInfoCircle,
   FaLaptopCode,
   FaLink,
@@ -37,6 +36,7 @@ const Sidebar = () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(hideTimeout);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hideTimeout]);
 
   const handleClick = (id) => {

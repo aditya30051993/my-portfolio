@@ -1,27 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState('light-mode');
+  const [theme, setTheme] = useState("light-mode");
 
   useEffect(() => {
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme ? 'dark-mode' : 'light-mode');
+    const prefersDarkScheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    const savedTheme =
+      localStorage.getItem("theme") ||
+      (prefersDarkScheme ? "dark-mode" : "light-mode");
     setTheme(savedTheme);
+    document.body.classList.remove("light-mode", "dark-mode");
     document.body.classList.add(savedTheme);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light-mode' ? 'dark-mode' : 'light-mode';
+    const newTheme = theme === "light-mode" ? "dark-mode" : "light-mode";
     setTheme(newTheme);
-    document.body.classList.remove('light-mode', 'dark-mode');
+    document.body.classList.remove("light-mode", "dark-mode");
     document.body.classList.add(newTheme);
-    localStorage.setItem('theme', newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
     <div className="theme-toggle" onClick={toggleTheme}>
-      {theme === 'light-mode' ? (
+      {theme === "light-mode" ? (
         <FaSun className="icon sun" />
       ) : (
         <FaMoon className="icon moon" />
