@@ -1,55 +1,87 @@
-import React, { useState, useEffect } from 'react';
-import { FaHome, FaUser, FaInfoCircle, FaLaptopCode, FaLink, FaProjectDiagram } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import {
+  FaHome,
+  FaUser,
+  FaInfoCircle,
+  FaLaptopCode,
+  FaLink,
+  FaProjectDiagram,
+  FaAngleRight,
+} from "react-icons/fa";
 
 const Sidebar = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
+  const [hideTimeout, setHideTimeout] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+      setIsVisible(true);
+      resetHideTimeout();
+      const sections = document.querySelectorAll("section");
+      const scrollPos =
+        window.pageYOffset || document.documentElement.scrollTop;
 
       sections.forEach((section) => {
         const offsetTop = section.offsetTop;
         const offsetBottom = offsetTop + section.offsetHeight;
 
         if (scrollPos >= offsetTop - 50 && scrollPos < offsetBottom - 50) {
-          setActiveSection(section.getAttribute('id'));
+          setActiveSection(section.getAttribute("id"));
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(hideTimeout);
     };
-  }, []);
+  }, [hideTimeout]);
 
   const handleClick = (id) => {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    resetHideTimeout();
+  };
+
+  const toggleSidebar = () => {
+    setIsVisible(!isVisible);
+    resetHideTimeout();
+  };
+
+  const resetHideTimeout = () => {
+    if (hideTimeout) clearTimeout(hideTimeout);
+    setHideTimeout(setTimeout(() => setIsVisible(false), 2000));
   };
 
   const navItems = [
-    { id: 'hero', label: 'Home', icon: <FaHome /> },
-    { id: 'profile', label: 'Profile', icon: <FaUser /> },
-    { id: 'about', label: 'About', icon: <FaInfoCircle /> },
-    { id: 'skills', label: 'Skills', icon: <FaLaptopCode /> },
-    { id: 'links', label: 'Links', icon: <FaLink /> },
-    { id: 'projects', label: 'Projects', icon: <FaProjectDiagram /> },
+    { id: "hero", label: "Home", icon: <FaHome /> },
+    { id: "profile", label: "Profile", icon: <FaUser /> },
+    { id: "about", label: "About", icon: <FaInfoCircle /> },
+    { id: "skills", label: "Skills", icon: <FaLaptopCode /> },
+    { id: "links", label: "Links", icon: <FaLink /> },
+    { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
   ];
 
   return (
-    <div className="sidebar">
-      <ul>
-        {navItems.map((item) => (
-          <li key={item.id} className={activeSection === item.id ? 'active' : ''}>
-            <a href={`#${item.id}`} onClick={() => handleClick(item.id)}>
-              {item.icon}
-              <span className="label">{item.label}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className={`sidebar ${isVisible ? "" : "collapsed"}`}>
+      <div className="toggle-button" onClick={toggleSidebar}>
+        {isVisible ? " " : <FaAngleRight />}
+      </div>
+      {isVisible && (
+        <ul>
+          {navItems.map((item) => (
+            <li
+              key={item.id}
+              className={activeSection === item.id ? "active" : ""}
+            >
+              <a href={`#${item.id}`} onClick={() => handleClick(item.id)}>
+                {item.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

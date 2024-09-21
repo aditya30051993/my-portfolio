@@ -3,7 +3,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: 80px;
+  width: 30px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0 50px 50px 0;
   padding: 10px;
@@ -13,6 +13,17 @@
   align-items: center;
   justify-content: space-evenly;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 10px;
+}
+
+.sidebar .toggle-button {
+  cursor: pointer;
+  color: white;
+  font-size: 1.5em;
 }
 
 .sidebar ul {
@@ -63,7 +74,11 @@
 
 @media screen and (max-width: 768px) {
   .sidebar {
-    width: 60px;
+    width: 30px;
+  }
+
+  .sidebar.collapsed {
+    width: 10px;
   }
 
   .sidebar li a {
