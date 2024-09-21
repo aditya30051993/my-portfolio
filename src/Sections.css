@@ -58,10 +58,14 @@
   color: var(--text-alt);
 }
 
+/* Hero Image with Fluid Border */
 .hero img {
-  border-radius: 50%;
+  position: relative;
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(270deg, #ff007a, #007aff, #00ff88);
+  padding: 5px;
 }
 
 /* CTA Buttons */
