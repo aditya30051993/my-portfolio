@@ -1,0 +1,15 @@
+.about {
+  font-family: "Arial", sans-serif;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding-inline: 30px;
+}

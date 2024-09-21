@@ -12,6 +12,7 @@ import "./App.css";
 import "./Sidebar.css";
 import "./Sections.css";
 import './Footer.css';
+import './About.css';
 
 function App() {
   return (
