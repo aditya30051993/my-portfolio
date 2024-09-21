@@ -31,7 +31,7 @@ const Links = () => {
 
   return (
     <section className="links" id="links">
-      <h2>Connect with Me</h2>
+      <h2>You can also...</h2>
       <div className="link-card-container">
         {linkData.map((link, index) => (
           <LinkCard
