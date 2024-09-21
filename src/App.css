@@ -1,5 +1,6 @@
 /* Reset margin and padding */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -82,12 +83,30 @@ footer {
   color: var(--text);
 }
 
-/* Smooth scroll for the entire page */
 html {
   scroll-behavior: smooth;
 }
 
-/* Ensure smooth transitions on theme switch */
 body {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px; /* Adjust top spacing */
+  right: 20px; /* Adjust right spacing */
+  cursor: pointer;
+  z-index: 1000; /* Ensure it is on top of other elements */
+}
+
+.icon {
+  font-size: 1.5em; /* Adjust icon size */
+}
+
+.sun {
+  color: yellow; /* Sun color */
+}
+
+.moon {
+  color: white; /* Moon color */
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const ThemeToggle = () => {
   const [theme, setTheme] = useState('light-mode');
@@ -20,8 +21,11 @@ const ThemeToggle = () => {
 
   return (
     <div className="theme-toggle" onClick={toggleTheme}>
-      <div className="toggle-circle"></div>
-      <div className={`icon ${theme === 'light-mode' ? 'sun' : 'moon'}`}></div>
+      {theme === 'light-mode' ? (
+        <FaSun className="icon sun" />
+      ) : (
+        <FaMoon className="icon moon" />
+      )}
     </div>
   );
 };
