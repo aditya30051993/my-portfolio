@@ -1,6 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaMedium, FaBriefcase } from "react-icons/fa"; // Importing icons
+import {
+  FaLinkedin,
+  FaGithub,
+  FaMedium,
+  FaBriefcase,
+  FaEnvelope,
+  FaDownload,
+} from "react-icons/fa"; // Importing icons
 
 const Hero = () => {
   const headingRef = useRef(null);
@@ -94,9 +101,11 @@ const Hero = () => {
       </div>
       <div className="cta-buttons">
         <a href="#contact" className="btn">
+          <FaEnvelope />
           Contact Me
         </a>
         <a href="/resume.pdf" className="btn" download>
+          <FaDownload />
           Download CV
         </a>
       </div>

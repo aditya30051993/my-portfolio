@@ -28,8 +28,8 @@ body.dark-mode {
   --text-dark-alt: #ccc;
   --sidebar-bg-dark: rgba(0, 0, 0, 0.9);
   --sidebar-text-dark: #fff;
-  --sidebar-hover-dark: #007AFF;
-  --sidebar-active-dark: #007AFF;
+  --sidebar-hover-dark: #007aff;
+  --sidebar-active-dark: #007aff;
 }
 
 body.light-mode {
@@ -108,5 +108,5 @@ body {
 }
 
 .moon {
-  color: white; /* Moon color */
+  color: black; /* Moon color */
 }

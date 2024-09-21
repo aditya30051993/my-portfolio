@@ -71,6 +71,7 @@
 /* CTA Buttons */
 .cta-buttons {
   margin-top: 20px;
+  display: flex;
 }
 
 .cta-buttons .btn {
@@ -84,6 +85,12 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.cta-buttons .btn svg {
+  margin-right: 8px;
 }
 
 .cta-buttons .btn:hover {
