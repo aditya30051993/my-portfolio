@@ -1,38 +1,177 @@
+:root {
+  /* Light theme colors */
+  --bg-light: linear-gradient(135deg, #ff7e5f, #feb47b);
+  --bg-light-alt: linear-gradient(135deg, #6a11cb, #2575fc);
+  --text-light: #333;
+  --text-light-alt: #fff;
+  --sidebar-bg-light: rgba(255, 255, 255, 0.9);
+  --sidebar-text-light: #333;
+  --sidebar-hover-light: #61dafb;
+  --sidebar-active-light: #61dafb;
+}
+
+body.dark-mode {
+  /* Dark theme colors */
+  --bg-dark: linear-gradient(135deg, #0f0f0f, #434343);
+  --bg-dark-alt: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  --text-dark: #fff;
+  --text-dark-alt: #ccc;
+  --sidebar-bg-dark: rgba(0, 0, 0, 0.9);
+  --sidebar-text-dark: #fff;
+  --sidebar-hover-dark: #61dafb;
+  --sidebar-active-dark: #61dafb;
+}
+
+body.light-mode {
+  /* Apply light theme colors */
+  --bg: var(--bg-light);
+  --bg-alt: var(--bg-light-alt);
+  --text: var(--text-light);
+  --text-alt: var(--text-light-alt);
+  --sidebar-bg: var(--sidebar-bg-light);
+  --sidebar-text: var(--sidebar-text-light);
+  --sidebar-hover: var(--sidebar-hover-light);
+  --sidebar-active: var(--sidebar-active-light);
+}
+
+body.dark-mode {
+  /* Apply dark theme colors */
+  --bg: var(--bg-dark);
+  --bg-alt: var(--bg-dark-alt);
+  --text: var(--text-dark);
+  --text-alt: var(--text-dark-alt);
+  --sidebar-bg: var(--sidebar-bg-dark);
+  --sidebar-text: var(--sidebar-text-dark);
+  --sidebar-hover: var(--sidebar-hover-dark);
+  --sidebar-active: var(--sidebar-active-dark);
+}
+
+/* General App styling */
 .App {
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--text);
+  background: var(--bg);
+}
+
+section:nth-child(even) {
+  background: var(--bg-alt);
+  color: var(--text-alt);
+}
+
+.hero {
+  color: var(--text);
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Skills section */
+.skills {
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.skills h2 {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.skills ul {
+  list-style: none;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.skills li {
+  margin: 5px 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* About section */
+.about {
+  padding: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about h2 {
+  margin-bottom: 10px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Project card styling */
+.project-card {
+  background-color: var(--bg-alt);
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  color: var(--text-alt);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text);
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 20%;
+  left: 20px;
+  background: var(--sidebar-bg);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar li.active a {
+  font-weight: bold;
+  color: var(--sidebar-active); /* Active section highlight */
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--sidebar-text); /* Adapted for theme */
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: var(--sidebar-hover); /* Hover effect */
+}
+
+/* Smooth scroll for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure smooth transitions on theme switch */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Hero from './components/Hero';
+import Profile from './components/Profile';
+import About from './components/About';
+import Skills from './components/Skills';
+import Links from './components/Links';
+import Projects from './components/Projects';
+import Sidebar from './components/Sidebar';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet>
+        <title>Dr. Aditya Kumar Gupta | Developer</title>
+        <meta name="description" content="Dr. Aditya Kumar Gupta's portfolio showcasing projects, skills, and professional experience." />
+        <meta name="keywords" content="developer, software engineer, projects, Upwork, GitHub, LinkedIn" />
+      </Helmet>
+      <Sidebar />
+      <Hero />
+      <Profile />
+      <About />
+      <Skills />
+      <Links />
+      <Projects />
+      <footer>
+        <p>&copy; 2024 Dr. Aditya Kumar Gupta</p>
+        <p>Email: <a href="mailto:aditya30051993@gmail.com">aditya30051993@gmail.com</a></p>
+      </footer>
     </div>
   );
 }
