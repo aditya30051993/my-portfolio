@@ -4,7 +4,6 @@
   left: 0;
   transform: translateY(-50%);
   width: 30px;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 0 50px 50px 0;
   padding: 10px;
   z-index: 1000;
@@ -22,8 +21,10 @@
 
 .sidebar .toggle-button {
   cursor: pointer;
-  color: white;
   font-size: 1.5em;
+  svg {
+    fill: var(--sidebar-text);
+  }
 }
 
 .sidebar ul {
@@ -36,6 +37,9 @@
   margin: 15px 0;
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  svg {
+    fill: var(--sidebar-text);
+  }
 }
 
 .sidebar li.active {
@@ -44,7 +48,6 @@
 }
 
 .sidebar li a {
-  color: white;
   text-decoration: none;
   display: flex;
   flex-direction: column;

@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Hero from "./components/Hero";
-import Profile from "./components/Profile";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Links from "./components/Links";
@@ -31,7 +30,6 @@ function App() {
       <ThemeToggle />
       <Sidebar />
       <Hero />
-      <Profile />
       <About />
       <Skills />
       <Links />

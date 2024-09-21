@@ -10,14 +10,14 @@ body {
 
 :root {
   /* Light theme colors */
-  --bg-light: linear-gradient(135deg, #ff7e5f, #feb47b);
-  --bg-light-alt: linear-gradient(135deg, #6a11cb, #2575fc);
-  --text-light: #333;
-  --text-light-alt: #fff;
-  --sidebar-bg-light: rgba(255, 255, 255, 0.9);
-  --sidebar-text-light: #333;
-  --sidebar-hover-light: #61dafb;
-  --sidebar-active-light: #61dafb;
+  --bg-light: linear-gradient(135deg, #ffffff, #f0f0f0); /* White gradient */
+  --bg-light-alt: #ffffff; /* Pure white for alternate sections */
+  --text-light: #000000; /* Black text */
+  --text-light-alt: #000000; /* Black text for alternate sections */
+  --sidebar-bg-light: rgba(255, 255, 255, 0.9); /* White sidebar */
+  --sidebar-text-light: #000000; /* Black sidebar text */
+  --sidebar-hover-light: #008080; /* Teal for hover */
+  --sidebar-active-light: #008080; /* Teal for active state */
 }
 
 body.dark-mode {
@@ -28,8 +28,8 @@ body.dark-mode {
   --text-dark-alt: #ccc;
   --sidebar-bg-dark: rgba(0, 0, 0, 0.9);
   --sidebar-text-dark: #fff;
-  --sidebar-hover-dark: #61dafb;
-  --sidebar-active-dark: #61dafb;
+  --sidebar-hover-dark: #007AFF;
+  --sidebar-active-dark: #007AFF;
 }
 
 body.light-mode {
@@ -104,7 +104,7 @@ body {
 }
 
 .sun {
-  color: yellow; /* Sun color */
+  color: darkorange; /* Sun color */
 }
 
 .moon {

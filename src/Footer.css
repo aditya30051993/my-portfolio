@@ -20,7 +20,7 @@
   }
   
   .footer h2, .footer h3 {
-    color: #61dafb;
+    color: #007AFF;
   }
   
   .footer p, .footer a {
@@ -29,7 +29,7 @@
   }
   
   .footer a:hover {
-    color: #61dafb;
+    color: #007AFF;
   }
   
   .footer .social-icons {
@@ -49,7 +49,7 @@
   }
   
   .footer .social-icons a:hover {
-    color: #61dafb;
+    color: #007AFF;
   }
   
   .footer-bottom {

@@ -56,7 +56,6 @@ const Sidebar = () => {
 
   const navItems = [
     { id: "hero", label: "Home", icon: <FaHome /> },
-    { id: "profile", label: "Profile", icon: <FaUser /> },
     { id: "about", label: "About", icon: <FaInfoCircle /> },
     { id: "skills", label: "Skills", icon: <FaLaptopCode /> },
     { id: "links", label: "Links", icon: <FaLink /> },
