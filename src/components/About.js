@@ -4,10 +4,10 @@ const About = () => (
   <section className="about" id="about">
     <h2>👋 Hello!</h2>
     <p>
-      I'm a dedicated medical officer passionate about AI and entrepreneurship.
-      My journey in healthcare has sparked a desire to explore innovative
-      solutions that bridge medicine and technology.
+      I'm a medical officer passionate about AI and entrepreneurship, driven to
+      find innovative solutions that connect medicine and technology.
     </p>
+
     <br />
     <p>
       With an <a href="#education">MBBS</a> degree, I have a strong foundation
@@ -16,9 +16,9 @@ const About = () => (
     </p>
     <br />
     <p>
-      I believe AI can transform patient experiences and outcomes. By leveraging
-      data-driven insights, I aim to create <a href="#projects">advancements</a>{" "}
-      that improve diagnostic accuracy and treatment efficiency. 🚀
+      I believe AI can transform patient experiences and outcomes. I aim to
+      create <a href="#projects">advancements</a> that improve diagnostic
+      accuracy and treatment efficiency. 🚀
     </p>
   </section>
 );

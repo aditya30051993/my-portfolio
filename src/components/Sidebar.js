@@ -6,10 +6,11 @@ import {
   FaLink,
   FaProjectDiagram,
   FaAngleRight,
+  FaChevronDown,
 } from "react-icons/fa";
 
 const Sidebar = () => {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("hero");
   const [isVisible, setIsVisible] = useState(false);
   const [hideTimeout, setHideTimeout] = useState(null);
 
@@ -62,26 +63,43 @@ const Sidebar = () => {
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
   ];
 
+  const handleNextSection = () => {
+    const sections = Array.from(document.querySelectorAll("section"));
+    const currentIndex = sections.findIndex(
+      (section) => section.getAttribute("id") === activeSection
+    );
+
+    if (currentIndex >= 0 && currentIndex < sections.length - 1) {
+      const nextSection = sections[currentIndex + 1];
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className={`sidebar ${isVisible ? "" : "collapsed"}`}>
-      <div className="toggle-button" onClick={toggleSidebar}>
-        {isVisible ? " " : <FaAngleRight />}
+    <>
+      <div className={`sidebar ${isVisible ? "" : "collapsed"}`}>
+        <div className="toggle-button" onClick={toggleSidebar}>
+          {isVisible ? " " : <FaAngleRight />}
+        </div>
+        {isVisible && (
+          <ul>
+            {navItems.map((item) => (
+              <li
+                key={item.id}
+                className={activeSection === item.id ? "active" : ""}
+              >
+                <a href={`#${item.id}`} onClick={() => handleClick(item.id)}>
+                  {item.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
-      {isVisible && (
-        <ul>
-          {navItems.map((item) => (
-            <li
-              key={item.id}
-              className={activeSection === item.id ? "active" : ""}
-            >
-              <a href={`#${item.id}`} onClick={() => handleClick(item.id)}>
-                {item.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+      <div className={`btmnav`} onClick={handleNextSection}>
+        <FaChevronDown className="next-section-icon" />
+      </div>
+    </>
   );
 };
 
