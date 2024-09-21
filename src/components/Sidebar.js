@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { FaHome, FaUser, FaInfoCircle, FaLaptopCode, FaLink, FaProjectDiagram } from 'react-icons/fa';
 
 const Sidebar = () => {
   const [activeSection, setActiveSection] = useState('');
 
-  // Handles scroll event and sets active section
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
@@ -25,32 +25,30 @@ const Sidebar = () => {
     };
   }, []);
 
-  // Smooth scroll when clicking a sidebar item
   const handleClick = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   };
 
+  const navItems = [
+    { id: 'hero', label: 'Home', icon: <FaHome /> },
+    { id: 'profile', label: 'Profile', icon: <FaUser /> },
+    { id: 'about', label: 'About', icon: <FaInfoCircle /> },
+    { id: 'skills', label: 'Skills', icon: <FaLaptopCode /> },
+    { id: 'links', label: 'Links', icon: <FaLink /> },
+    { id: 'projects', label: 'Projects', icon: <FaProjectDiagram /> },
+  ];
+
   return (
     <div className="sidebar">
       <ul>
-        <li className={activeSection === 'hero' ? 'active' : ''}>
-          <a href="#hero" onClick={() => handleClick('hero')}>Home</a>
-        </li>
-        <li className={activeSection === 'profile' ? 'active' : ''}>
-          <a href="#profile" onClick={() => handleClick('profile')}>Profile</a>
-        </li>
-        <li className={activeSection === 'about' ? 'active' : ''}>
-          <a href="#about" onClick={() => handleClick('about')}>About</a>
-        </li>
-        <li className={activeSection === 'skills' ? 'active' : ''}>
-          <a href="#skills" onClick={() => handleClick('skills')}>Skills</a>
-        </li>
-        <li className={activeSection === 'links' ? 'active' : ''}>
-          <a href="#links" onClick={() => handleClick('links')}>links</a>
-        </li>
-        <li className={activeSection === 'projects' ? 'active' : ''}>
-          <a href="#projects" onClick={() => handleClick('projects')}>Projects</a>
-        </li>
+        {navItems.map((item) => (
+          <li key={item.id} className={activeSection === item.id ? 'active' : ''}>
+            <a href={`#${item.id}`} onClick={() => handleClick(item.id)}>
+              {item.icon}
+              <span className="label">{item.label}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );

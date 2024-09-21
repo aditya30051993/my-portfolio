@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Links from './components/Links';
 import Projects from './components/Projects';
 import Sidebar from './components/Sidebar';
+import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <meta name="description" content="Dr. Aditya Kumar Gupta's portfolio showcasing projects, skills, and professional experience." />
         <meta name="keywords" content="developer, software engineer, projects, Upwork, GitHub, LinkedIn" />
       </Helmet>
+      <ThemeToggle />
       <Sidebar />
       <Hero />
       <Profile />
