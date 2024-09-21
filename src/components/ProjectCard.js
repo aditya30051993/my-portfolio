@@ -4,6 +4,7 @@ const ProjectCard = ({
   title,
   description,
   image,
+  video,
   linkLabel,
   linkIcon,
   linkUrl,
@@ -12,7 +13,10 @@ const ProjectCard = ({
   return (
     <div className="project-card">
       <div className="project-image">
-        <img src={image} alt={title} />
+        {(image && <img src={image} alt={title} />) ||
+          (video && (
+            <iframe src={video} title={title} allow="autoplay"></iframe>
+          ))}
       </div>
       <div className="project-details">
         <h3>{title}</h3>

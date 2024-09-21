@@ -1,7 +1,17 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { FaExternalLinkAlt, FaRegStar } from "react-icons/fa"; // Import icons
-import { FaCodeFork } from "react-icons/fa6";
+import {
+  FaComment,
+  FaCopy,
+  FaDownload,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaGoogleDrive,
+  FaMedium,
+  FaRegStar,
+  FaVideo,
+} from "react-icons/fa"; // Import icons
+import { FaCodeFork, FaHandsClapping } from "react-icons/fa6";
 
 function generateRandomHash(length = 8) {
   let hash = "";
@@ -22,7 +32,7 @@ const Projects = () => {
         "A.D.I. enhances interactions web content integrating RAG for dynamic queries with Co-Pilot",
       image: `https://opengraph.githubassets.com/${randomHash}/aditya30051993/A.D.I`,
       linkLabel: "Find More",
-      linkIcon: <FaExternalLinkAlt />,
+      linkIcon: <FaGithub />,
       linkUrl: "https://github.com/aditya30051993/A.D.I",
       ctas: [
         {
@@ -38,12 +48,56 @@ const Projects = () => {
       ],
     },
     {
+      title: "Locum Healthcare",
+      description:
+        "Showcasing the Locum Healthcare app for job management, built with Flutter and Firebase",
+      video: `https://drive.google.com/file/d/1Vt0wpQjJ793EkdujfR5GYxsqma8Vtc2v/preview`,
+      linkLabel: "View More",
+      linkIcon: <FaVideo />,
+      linkUrl:
+        "https://www.loom.com/share/8c108e103e3c44f3b66bbf44cc5943d3?sid=3a9de2c4-372d-4f95-a733-b502dd20577b",
+      ctas: [
+        {
+          icon: <FaCopy />,
+          label: "Copy",
+          link: "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/copy",
+        },
+        {
+          icon: <FaDownload />,
+          label: "Download",
+          link: "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/export?format=pdf",
+        },
+      ],
+    },
+    {
+      title: "Introducing A.D.I",
+      description:
+        "See how A.D.I. transforms RAG systems for seamless, bi-directional user engagement",
+      image: `https://miro.medium.com/v2/da:true/resize:fit:745/1*iBiNWW_SWyJcUUK3TMjpPw.gif`,
+      linkLabel: "Read More",
+      linkIcon: <FaMedium />,
+      linkUrl:
+        "https://medium.com/@adi93/the-augmented-delegation-interface-for-rag-revolutionizing-web-and-document-interaction-with-a-d-i-ccb7d60c5bfa",
+      ctas: [
+        {
+          icon: <FaHandsClapping />,
+          label: "Clap",
+          link: "https://medium.com/@adi93/the-augmented-delegation-interface-for-rag-revolutionizing-web-and-document-interaction-with-a-d-i-ccb7d60c5bfa#claps",
+        },
+        {
+          icon: <FaComment />,
+          label: "Comment",
+          link: "https://medium.com/@adi93/the-augmented-delegation-interface-for-rag-revolutionizing-web-and-document-interaction-with-a-d-i-ccb7d60c5bfa#comments",
+        },
+      ],
+    },
+    {
       title: "My Portfolio",
       description:
         "A showcase of my projects and skills across various domains and technologies",
       image: `https://opengraph.githubassets.com/${randomHash}/aditya30051993/my-portfolio`,
       linkLabel: "Find More",
-      linkIcon: <FaExternalLinkAlt />,
+      linkIcon: <FaGithub />,
       linkUrl: "https://github.com/aditya30051993/my-portfolio",
       ctas: [
         {
@@ -59,9 +113,31 @@ const Projects = () => {
       ],
     },
     {
+      title: "Proposal Writing",
+      description:
+        "Comprehensive technical proposal ensuring scalable, reliable solutions with clear milestones",
+      image: `https://s11.gifyu.com/images/SAqzi.gif`,
+      linkLabel: "Read More",
+      linkIcon: <FaGoogleDrive />,
+      linkUrl:
+        "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/edit",
+      ctas: [
+        {
+          icon: <FaCopy />,
+          label: "Copy",
+          link: "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/copy",
+        },
+        {
+          icon: <FaDownload />,
+          label: "Download",
+          link: "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/export?format=pdf",
+        },
+      ],
+    },
+    {
       title: "Trade Assistant",
       description:
-        "Real-time stock trading assistant taking decisions based on current market and portfolio.",
+        "Real-time stock trading assistant taking decisions based on current market and portfolio",
       image: `https://opengraph.githubassets.com/${randomHash}/aditya30051993/TradeAssistant`,
       linkLabel: "Find More",
       linkIcon: <FaExternalLinkAlt />,
@@ -88,6 +164,7 @@ const Projects = () => {
         {projectData.map((project, index) => (
           <ProjectCard
             key={index}
+            video={project.video}
             title={project.title}
             description={project.description}
             image={project.image}
