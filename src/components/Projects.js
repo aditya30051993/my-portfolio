@@ -55,17 +55,17 @@ const Projects = () => {
       linkLabel: "View More",
       linkIcon: <FaVideo />,
       linkUrl:
-        "https://www.loom.com/share/8c108e103e3c44f3b66bbf44cc5943d3?sid=3a9de2c4-372d-4f95-a733-b502dd20577b",
+        "https://drive.google.com/file/d/1Vt0wpQjJ793EkdujfR5GYxsqma8Vtc2v/view?usp=sharing",
       ctas: [
         {
-          icon: <FaCopy />,
-          label: "Copy",
-          link: "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/copy",
+          icon: <FaComment />,
+          label: "Comment",
+          link: "https://drive.google.com/file/d/1Vt0wpQjJ793EkdujfR5GYxsqma8Vtc2v/view?usp=drive_link",
         },
         {
           icon: <FaDownload />,
           label: "Download",
-          link: "https://docs.google.com/document/d/1xpxEqjVIDaqytwxPxVlGn0pwGvWDNopKh1q-k9IEhow/export?format=pdf",
+          link: "https://drive.google.com/uc?export=download&id=1Vt0wpQjJ793EkdujfR5GYxsqma8Vtc2v",
         },
       ],
     },
