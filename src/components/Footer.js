@@ -29,7 +29,7 @@ const Footer = () => {
             <a href="https://github.com/aditya30051993" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/aditya-kumar-gupta" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/adi0593/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <i className="fab fa-linkedin"></i>
             </a>
             <a href="https://medium.com/@adi93" target="_blank" rel="noopener noreferrer" aria-label="Medium">
