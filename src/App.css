@@ -19,6 +19,8 @@ body {
   --sidebar-hover-light: #008080; /* Teal for hover */
   --sidebar-active-light: #008080; /* Teal for active state */
   --shadow-bg-light: rgba(0, 0, 0, 0.3); /* White sidebar */
+  --link-color-light: #008080;
+  --link-hover-color-light: #006666;
 }
 
 body.dark-mode {
@@ -31,7 +33,9 @@ body.dark-mode {
   --sidebar-text-dark: #fff;
   --sidebar-hover-dark: #007aff;
   --sidebar-active-dark: #007aff;
-  --shadow-bg-dark: rgba(255, 255, 255, 0.3); /* White sidebar */
+  --shadow-bg-dark: rgba(255, 255, 255, 0.3);
+  --link-color: #66b3b3;
+  --link-hover-color: #4db2b2;
 }
 
 body.light-mode {
@@ -45,6 +49,8 @@ body.light-mode {
   --sidebar-hover: var(--sidebar-hover-light);
   --sidebar-active: var(--sidebar-active-light);
   --shadow-bg: var(--shadow-bg-light);
+  --link-color: var(--link-color-light);
+  --link-hover-color: var(--link-hover-color-light);
 }
 
 body.dark-mode {
@@ -113,4 +119,18 @@ body {
 
 .moon {
   color: black; /* Moon color */
+}
+
+a {
+  color: var(--link-color); /* Default link color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color); /* Hover state color */
+}
+
+a:active,
+a:visited {
+  color: var(--link-color); /* Active and visited state color */
 }

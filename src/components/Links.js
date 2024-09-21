@@ -15,20 +15,21 @@ const Links = () => {
       title: "Medium",
       description: "Read on Medium where I write about tech.",
       image:
-        "https://miro.medium.com/v2/resize:fit:1400/1*psYl0y9DUzZWtHzFJLIvTw.png",
-    },
-    {
-      url: "https://www.linkedin.com/in/adi0593/",
-      title: "LinkedIn",
-      description: "Join me on LinkedIn for work connections.",
-      image: "https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/640px-Medium_%28website%29_logo.svg.png",
     },
     {
       url: "https://github.com/aditya30051993",
       title: "GitHub",
       description: "Explore my projects and code on GitHub.",
       image:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        "https://static.wikia.nocookie.net/windows/images/0/01/GitHub_logo_2013.png",
+    },
+    {
+      url: "https://www.linkedin.com/in/adi0593/",
+      title: "LinkedIn",
+      description: "Join me on LinkedIn for work connections.",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinkedIn_Logo.svg/640px-LinkedIn_Logo.svg.png",
     },
   ];
 
