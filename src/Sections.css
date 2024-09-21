@@ -125,7 +125,6 @@
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  background: #f8f8f8;
 }
 
 .link-card a {
@@ -140,7 +139,6 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  background: #f8f8f8;
 }
 
 .card-image img {
@@ -151,19 +149,16 @@
 
 .card-details {
   padding: 12px;
-  background: #f8f8f8;
 }
 
 .card-details h3 {
   margin: 0;
   font-size: 1.2em;
-  color: #333;
 }
 
 .card-details p {
   margin: 2px 0 0;
   font-size: 0.8em;
-  color: #777;
 }
 
 /* Grid for Cards */
