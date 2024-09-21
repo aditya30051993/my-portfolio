@@ -18,6 +18,7 @@ body {
   --sidebar-text-light: #000000; /* Black sidebar text */
   --sidebar-hover-light: #008080; /* Teal for hover */
   --sidebar-active-light: #008080; /* Teal for active state */
+  --shadow-bg-light: rgba(0, 0, 0, 0.3); /* White sidebar */
 }
 
 body.dark-mode {
@@ -30,6 +31,7 @@ body.dark-mode {
   --sidebar-text-dark: #fff;
   --sidebar-hover-dark: #007aff;
   --sidebar-active-dark: #007aff;
+  --shadow-bg-dark: rgba(255, 255, 255, 0.3); /* White sidebar */
 }
 
 body.light-mode {
@@ -42,6 +44,7 @@ body.light-mode {
   --sidebar-text: var(--sidebar-text-light);
   --sidebar-hover: var(--sidebar-hover-light);
   --sidebar-active: var(--sidebar-active-light);
+  --shadow-bg: var(--shadow-bg-light);
 }
 
 body.dark-mode {
@@ -54,6 +57,7 @@ body.dark-mode {
   --sidebar-text: var(--sidebar-text-dark);
   --sidebar-hover: var(--sidebar-hover-dark);
   --sidebar-active: var(--sidebar-active-dark);
+  --shadow-bg: var(--shadow-bg-dark);
 }
 
 /* General App styling */

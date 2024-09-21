@@ -5,6 +5,7 @@
 .skills {
   padding: 20px;
   text-align: center;
+  font-family: "Arial", sans-serif;
 }
 
 .skills h2 {
@@ -87,6 +88,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  box-shadow: 0px 3px 10px var(--shadow-bg);
 }
 
 .cta-buttons .btn svg {
@@ -119,11 +121,15 @@
 .link-card {
   width: 300px;
   margin: 20px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 15px var(--shadow-bg);
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
   background: #f8f8f8;
+}
+
+.link-card a {
+  text-decoration: none;
 }
 
 .link-card:hover {
@@ -140,11 +146,11 @@
 .card-image img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-details {
-  padding: 15px;
+  padding: 12px;
   background: #f8f8f8;
 }
 
@@ -155,8 +161,8 @@
 }
 
 .card-details p {
-  margin: 10px 0 0;
-  font-size: 0.9em;
+  margin: 2px 0 0;
+  font-size: 0.8em;
   color: #777;
 }
 
@@ -176,6 +182,20 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.links {
+  font-family: "Arial", sans-serif;
+}
+
+.links h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 /* Mobile Styles */

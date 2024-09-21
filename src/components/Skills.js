@@ -92,6 +92,7 @@ const Skills = () => {
 
   return (
     <section className="skills" id="skills">
+      <h2>🛠️ My Toolkit</h2>
       <div className="tabs">
         {Object.keys(skillsData).map((tab) => (
           <button

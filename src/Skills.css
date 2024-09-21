@@ -3,7 +3,6 @@
 }
 
 .tabs {
-  margin-top: 64px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
@@ -12,6 +11,7 @@
   overflow: hidden;
   position: relative;
   align-items: center;
+  box-shadow: 0px 3px 15px var(--shadow-bg);
 }
 
 .tab {
@@ -53,7 +53,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
 }
 
 .card {
@@ -69,6 +69,7 @@
   text-decoration: none;
   color: var(--text);
   transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 12px var(--shadow-bg);
 }
 
 .card:hover {
