@@ -87,12 +87,6 @@ section:nth-child(even) {
   color: var(--text-alt);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  color: var(--text);
-}
-
 html {
   scroll-behavior: smooth;
 }

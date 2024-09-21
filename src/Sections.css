@@ -84,7 +84,7 @@
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -344,7 +344,6 @@
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
-    width: 100%;
   }
 
   .hero h1 {

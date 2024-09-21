@@ -7,12 +7,14 @@ import {
   FaProjectDiagram,
   FaAngleRight,
   FaChevronDown,
+  FaChevronUp,
 } from "react-icons/fa";
 
 const Sidebar = () => {
   const [activeSection, setActiveSection] = useState("hero");
   const [isVisible, setIsVisible] = useState(false);
   const [hideTimeout, setHideTimeout] = useState(null);
+  const [atEnd, setAtEnd] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,12 +24,14 @@ const Sidebar = () => {
       const scrollPos =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      sections.forEach((section) => {
+      sections.forEach((section, i) => {
         const offsetTop = section.offsetTop;
         const offsetBottom = offsetTop + section.offsetHeight;
 
         if (scrollPos >= offsetTop - 50 && scrollPos < offsetBottom - 50) {
           setActiveSection(section.getAttribute("id"));
+          if (i === sections.length - 1) setAtEnd(true);
+          else setAtEnd(false);
         }
       });
     };
@@ -72,6 +76,8 @@ const Sidebar = () => {
     if (currentIndex >= 0 && currentIndex < sections.length - 1) {
       const nextSection = sections[currentIndex + 1];
       nextSection.scrollIntoView({ behavior: "smooth" });
+    } else if (atEnd) {
+      handleClick("hero");
     }
   };
 
@@ -97,7 +103,11 @@ const Sidebar = () => {
         )}
       </div>
       <div className={`btmnav`} onClick={handleNextSection}>
-        <FaChevronDown className="next-section-icon" />
+        {atEnd ? (
+          <FaChevronUp className="next-section-icon" />
+        ) : (
+          <FaChevronDown className="next-section-icon" />
+        )}
       </div>
     </>
   );
