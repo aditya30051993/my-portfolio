@@ -1,4 +1,3 @@
-/* Skills section */
 .skills {
   padding: 20px;
   text-align: center;
@@ -17,7 +16,6 @@
   margin: 5px 0;
 }
 
-/* About section */
 .about {
   padding: 20px;
   text-align: center;
@@ -33,7 +31,6 @@
   line-height: 1.6;
 }
 
-/* Project card styling */
 .project-card {
   background-color: var(--bg-alt);
   border: 1px solid #ddd;
@@ -42,7 +39,6 @@
   color: var(--text-alt);
 }
 
-/* Hero Section */
 .hero {
   color: var(--text);
 }
@@ -111,3 +107,16 @@
   overflow: hidden;
 }
 
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+
+  .skills, .about, .hero, .links, .profile, .projects {
+    padding-top: 100px;
+    padding-inline: 50px;
+    display: flex; /* Flex container */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the start */
+    text-align: center;
+  }
+
+}

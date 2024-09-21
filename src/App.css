@@ -61,7 +61,7 @@ body.dark-mode {
 }
 
 section {
-  height: 100vh;
+  height: 100svh;
   scroll-snap-align: start;
   display: flex;
   align-items: center;
