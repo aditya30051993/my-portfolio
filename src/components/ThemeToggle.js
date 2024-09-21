@@ -27,9 +27,9 @@ const ThemeToggle = () => {
   return (
     <div className="theme-toggle" onClick={toggleTheme}>
       {theme === "light-mode" ? (
-        <FaSun className="icon sun" />
-      ) : (
         <FaMoon className="icon moon" />
+      ) : (
+        <FaSun className="icon sun" />
       )}
     </div>
   );
