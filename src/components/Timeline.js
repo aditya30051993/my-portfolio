@@ -34,7 +34,7 @@ const MyTimeline = () => {
     },
     {
       type: "Work",
-      logo: "http://www.smcshah.in/images/logo.png",
+      logo: "https://scontent.flko7-4.fna.fbcdn.net/v/t39.30808-6/294412974_423834199759372_4157046619046258703_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=fgCLJ4c1IjMQ7kNvgF_x9NK&_nc_ht=scontent.flko7-4.fna&_nc_gid=AW4e2aq2VS2nw7R-QZ8Zxsx&oh=00_AYAjSf_QPaOStTAy-f_Ivh9nVmzFwj-C5zNmz1yjp5Ht8A&oe=66F5A5F5",
       title: "Autonomous State Medical College, Shahjahanpur",
       subtitle: "Resident Doctor (Casualty)",
       description:
