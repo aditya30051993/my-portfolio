@@ -10,6 +10,7 @@ import {
   FaChevronUp,
   FaCalendar,
 } from "react-icons/fa";
+import { FaPhoneFlip } from "react-icons/fa6";
 
 const Sidebar = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -67,6 +68,7 @@ const Sidebar = () => {
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
     { id: "timeline", label: "Timeline", icon: <FaCalendar /> },
     { id: "links", label: "Links", icon: <FaLink /> },
+    { id: "contact", label: "Contacts", icon: <FaPhoneFlip /> },
   ];
 
   const handleNextSection = () => {

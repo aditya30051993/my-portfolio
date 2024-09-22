@@ -13,3 +13,68 @@
   text-align: justify;
   padding-inline: 30px;
 }
+
+.contact {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px;
+  width: 80%;
+  max-width: 600px;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-info-addr {
+  text-align: center;
+}
+
+.contact-actions {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact p svg {
+  padding-right: 5px;
+}
+
+.contact p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fc5;
+}
+
+.qr-code {
+  margin-top: 20px;
+}
+
+.qr-code h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}

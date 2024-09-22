@@ -12,10 +12,11 @@ import Footer from "./components/Footer";
 import "./App.css";
 import "./Sidebar.css";
 import "./Sections.css";
-import './Footer.css';
-import './About.css';
-import './Skills.css';
-import './Timeline.css';
+import "./Footer.css";
+import "./About.css";
+import "./Skills.css";
+import "./Timeline.css";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
       <Projects />
       <Timeline />
       <Links />
+      <Contact />
       <Footer />
     </div>
   );
