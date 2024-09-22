@@ -1,26 +1,27 @@
 import React from "react";
+import footerData from "../data/about.json";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footer-content">
         <div className="footer-section">
-          <h1>Dr. Aditya Kumar Gupta</h1>
+          <h1>{footerData.name}</h1>
         </div>
 
         <div className="footer-section">
           <p>
-            <a href="mailto:aditya30051993@gmail.com">
-              aditya30051993@gmail.com
+            <a href={`mailto:${footerData.email}`}>
+              {footerData.email}
             </a>
-            &nbsp;| <a href="tel:+919810377323">+91-9810377323</a>
+            &nbsp;| <a href={`tel:${footerData.phone}`}>{footerData.phone}</a>
           </p>
         </div>
 
         <div className="footer-section connect">
           <div className="social-icons">
             <a
-              href="https://github.com/aditya30051993"
+              href={footerData.socialLinks.github.url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -28,7 +29,7 @@ const Footer = () => {
               <i className="fab fa-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/adi0593/"
+              href={footerData.socialLinks.linkedin.url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -36,7 +37,7 @@ const Footer = () => {
               <i className="fab fa-linkedin"></i>
             </a>
             <a
-              href="https://medium.com/@adi93"
+              href={footerData.socialLinks.medium.url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Medium"
@@ -44,7 +45,7 @@ const Footer = () => {
               <i className="fab fa-medium"></i>
             </a>
             <a
-              href="https://www.upwork.com/freelancers/~01ad99ec024ec54387"
+              href={footerData.socialLinks.upwork.url}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Upwork"
@@ -56,7 +57,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; 2024 Dr. Aditya Kumar Gupta. All Rights Reserved.</p>
+        <p>{footerData.copyright}</p>
       </div>
     </footer>
   );
