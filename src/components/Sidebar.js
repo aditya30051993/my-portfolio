@@ -17,6 +17,7 @@ const Sidebar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [hideTimeout, setHideTimeout] = useState(null);
   const [atEnd, setAtEnd] = useState(false);
+  const [debounceTimeout, setDebounceTimeout] = useState(null); // For debouncing title and URL hash
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +32,22 @@ const Sidebar = () => {
         const offsetBottom = offsetTop + section.offsetHeight;
 
         if (scrollPos >= offsetTop - 50 && scrollPos < offsetBottom - 50) {
-          setActiveSection(section.getAttribute("id"));
+          const sectionId = section.getAttribute("id");
+          const sectionLabel = navItems.find(
+            (item) => item.id === sectionId
+          )?.label;
+
+          setActiveSection(sectionId);
+
+          // Debounce title and URL hash changes
+          if (debounceTimeout) clearTimeout(debounceTimeout);
+          setDebounceTimeout(
+            setTimeout(() => {
+              document.title = "Dr Aditya | " + sectionLabel; // Change the document title
+              window.history.pushState(null, "", `#${sectionId}`); // Change the URL hash
+            }, 200) // 200ms debounce
+          );
+
           if (i === sections.length - 1) setAtEnd(true);
           else setAtEnd(false);
         }
@@ -42,9 +58,10 @@ const Sidebar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(hideTimeout);
+      clearTimeout(debounceTimeout); // Cleanup debounce timeout
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hideTimeout]);
+  }, [hideTimeout, debounceTimeout]);
 
   const handleClick = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
