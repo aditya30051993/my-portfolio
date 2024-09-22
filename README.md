@@ -10,10 +10,10 @@ A dynamic React-based portfolio website featuring:
 
 Live at: [https://aditya30051993.github.io/my-portfolio](https://aditya30051993.github.io/my-portfolio)
 
-<div style="display: flex; justify-content: center;">
-    <img src="./docs/web_portfolio.gif" alt="Web Portfolio" style="margin: 10px; width: 80%;"/>
-    <img src="./docs/mob_portfolio.gif" alt="Mobile Portfolio" style="margin: 10px; width: 20%;"/>
-</div>
+<p float="left">
+    <img src="./docs/web_portfolio.gif" alt="Web Portfolio" style="width: 700px;"/>
+    <img src="./docs/mob_portfolio.gif" alt="Mobile Portfolio" style="width: 207px;"/>
+</p>
 
 ## Setup for Development
 
