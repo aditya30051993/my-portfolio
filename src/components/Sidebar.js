@@ -8,6 +8,7 @@ import {
   FaAngleRight,
   FaChevronDown,
   FaChevronUp,
+  FaCalendar,
 } from "react-icons/fa";
 
 const Sidebar = () => {
@@ -64,6 +65,7 @@ const Sidebar = () => {
     { id: "about", label: "About", icon: <FaInfoCircle /> },
     { id: "skills", label: "Skills", icon: <FaLaptopCode /> },
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
+    { id: "timeline", label: "Timeline", icon: <FaCalendar /> },
     { id: "links", label: "Links", icon: <FaLink /> },
   ];
 

@@ -10,7 +10,7 @@ const About = () => (
 
     <br />
     <p>
-      With an <a href="#education">MBBS</a> degree, I have a strong foundation
+      With an <a href="#timeline-mbbs">MBBS</a> degree, I have a strong foundation
       in clinical practices, driving me to enhance healthcare through advanced{" "}
       <a href="#skills"> technologies</a>.
     </p>

@@ -1,0 +1,138 @@
+.timeline {
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.timeline-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Timeline card style */
+.timeline-card {
+  display: flex;
+  flex-direction: column; /* Ensure image stays beside content */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--shadow-bg);
+  padding: 15px;
+  margin: 10px 0;
+  max-width: 500px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: scale(1.05);
+}
+
+.timeline-card-details {
+  display: flex;
+}
+
+/* Card logo section */
+.card-logo {
+  width: 64px;
+  height: auto;
+  margin-right: 10px;
+  align-self: center;
+}
+
+.card-logo img {
+  width: 64px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Card content section */
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.card-content h4 {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: var(--text-alt);
+}
+
+.card-content p {
+  margin: 8px 0;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.timeline-dates {
+  font-size: 0.75rem;
+  color: var(--text-alt);
+  margin-top: 5px;
+}
+
+.chip {
+  width: 100%;
+  padding-inline: 4px;
+  margin-left: -3px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-transform: uppercase;
+}
+
+.chip.work {
+  background-color: #318ef1; /* Blue for work */
+}
+
+.chip.education {
+  background-color: #32994a; /* Green for education */
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .timeline-card {
+    align-items: center;
+    width: 80%; /* Adjust card width */
+  }
+
+  .card-logo img {
+    margin-right: 15px; /* Ensure there's space between image and text */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-card {
+    padding: 10px;
+    width: 80%;
+  }
+
+  .card-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-content h4 {
+    font-size: 0.85rem;
+  }
+
+  .card-content p {
+    font-size: 0.8rem;
+  }
+
+  .timeline-dates {
+    font-size: 0.7rem;
+  }
+}

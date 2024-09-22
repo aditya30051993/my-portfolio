@@ -5,6 +5,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Links from "./components/Links";
 import Projects from "./components/Projects";
+import Timeline from "./components/Timeline";
 import Sidebar from "./components/Sidebar";
 import ThemeToggle from "./components/ThemeToggle";
 import Footer from "./components/Footer";
@@ -14,6 +15,7 @@ import "./Sections.css";
 import './Footer.css';
 import './About.css';
 import './Skills.css';
+import './Timeline.css';
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Timeline />
       <Links />
       <Footer />
     </div>
