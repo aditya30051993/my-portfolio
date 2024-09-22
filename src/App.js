@@ -34,8 +34,8 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Links />
       <Projects />
+      <Links />
       <Footer />
     </div>
   );

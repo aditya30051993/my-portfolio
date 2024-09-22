@@ -306,9 +306,15 @@
 /* Container for the Project Cards */
 .project-card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 2 columns in a row */
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
   gap: 20px; /* Add space between the grid items */
   padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .project-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Mobile Styles */

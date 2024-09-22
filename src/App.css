@@ -72,7 +72,8 @@ body.dark-mode {
 }
 
 section {
-  height: 100svh;
+  min-height: 100svh;
+  height: auto;
   scroll-snap-align: start;
   display: flex;
   align-items: center;
@@ -80,6 +81,7 @@ section {
   flex-direction: column;
   color: var(--text);
   background: var(--bg);
+  padding-bottom: 50px;
 }
 
 section:nth-child(even) {

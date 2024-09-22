@@ -63,8 +63,8 @@ const Sidebar = () => {
     { id: "hero", label: "Home", icon: <FaHome /> },
     { id: "about", label: "About", icon: <FaInfoCircle /> },
     { id: "skills", label: "Skills", icon: <FaLaptopCode /> },
-    { id: "links", label: "Links", icon: <FaLink /> },
     { id: "projects", label: "Projects", icon: <FaProjectDiagram /> },
+    { id: "links", label: "Links", icon: <FaLink /> },
   ];
 
   const handleNextSection = () => {
