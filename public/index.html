@@ -11,10 +11,25 @@
       function gtag() {
         dataLayer.push(arguments);
       }
+
       gtag("js", new Date());
 
-      gtag("config", "G-MW0THJ1DWR");
+      // Initialize Google Analytics with the provided Measurement ID
+      gtag("config", "G-MW0THJ1DWR", {
+        page_path: window.location.pathname + window.location.hash,
+      });
+
+      // Function to track hash changes
+      function trackHashChange() {
+        gtag("config", "G-MW0THJ1DWR", {
+          page_path: window.location.pathname + window.location.hash,
+        });
+      }
+
+      // Listen for hash changes
+      window.addEventListener("hashchange", trackHashChange);
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
